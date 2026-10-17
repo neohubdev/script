@@ -1,167 +1,70 @@
-local _0x379E = game:GetService("Players")
-local _0xDCDE = _0x379E.LocalPlayerif _0xDCDE.PlayerGui:FindFirstChild("NEOHUB_KeySystem") then
-_0xDCDE.PlayerGui.NEOHUB_KeySystem:Destroy()
-endlocal _0xCD63 = Instance.new("ScreenGui")
-_0xCD63.Name ="NEOHUB_KeySystem"_0xCD63.ResetOnSpawn = false
-_0xCD63.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-_0xCD63.Parent = _0xDCDE:WaitForChild("PlayerGui")local _0xB5CB = Instance.new("Frame")
-_0xB5CB.Name ="Main"_0xB5CB.Size = UDim2.new(0, 380, 0, 250)
-_0xB5CB.Position = UDim2.new(0.5, -190, 0.5, -125)
-_0xB5CB.BackgroundColor3 = Color3.fromRGB(20, 20, 22)
-_0xB5CB.BorderSizePixel = 0
-_0xB5CB.Parent = _0xCD63
-local _0xBF1E = Instance.new("UICorner")
-_0xBF1E.CornerRadius = UDim.new(0, 10)
-_0xBF1E.Parent = _0xB5CB
-local _0x1C59 = Instance.new("UIStroke")
-_0x1C59.Color = Color3.fromRGB(226, 47, 47)
-_0x1C59.Thickness = 1.5
-_0x1C59.Parent = _0xB5CBlocal _0x83EE = Instance.new("Frame")
-_0x83EE.Name ="TitleBar"_0x83EE.Size = UDim2.new(1, 0, 0, 60)
-_0x83EE.BackgroundColor3 = Color3.fromRGB(15, 15, 18)
-_0x83EE.BorderSizePixel = 0
-_0x83EE.Parent = _0xB5CB
-local _0x1B75 = Instance.new("UICorner")
-_0x1B75.CornerRadius = UDim.new(0, 10)
-_0x1B75.Parent = _0x83EE
-local _0x0155 = Instance.new("Frame")_0x0155.Size = UDim2.new(1, 0, 0, 12)
-_0x0155.Position = UDim2.new(0, 0, 1, -12)
-_0x0155.BackgroundColor3 = Color3.fromRGB(15, 15, 18)
-_0x0155.BorderSizePixel = 0
-_0x0155.Parent = _0x83EE
-local _0x9A37 = Instance.new("TextLabel")
-_0x9A37.Name ="Title"_0x9A37.Size = UDim2.new(1, 0, 0, 34)
-_0x9A37.Position = UDim2.new(0, 0, 0, 8)
-_0x9A37.BackgroundTransparency = 1
-_0x9A37.Text ="NEOHUB"_0x9A37.TextColor3 = Color3.fromRGB(226, 47, 47)
-_0x9A37.Font = Enum.Font.GothamBold
-_0x9A37.TextSize = 24
-_0x9A37.Parent = _0x83EE
-local _0xD7DB = Instance.new("Frame")
-_0xD7DB.Size = UDim2.new(0, 60, 0, 2)
-_0xD7DB.Position = UDim2.new(0.5, -30, 0, 42)
-_0xD7DB.BackgroundColor3 = Color3.fromRGB(226, 47, 47)
-_0xD7DB.BackgroundTransparency = 0.3
-_0xD7DB.BorderSizePixel = 0
-_0xD7DB.Parent = _0x83EElocal _0xE1D1 = Instance.new("TextBox")
-_0xE1D1.Name ="KeyBox"_0xE1D1.Size = UDim2.new(1, -40, 0, 40)
-_0xE1D1.Position = UDim2.new(0, 20, 0, 80)
-_0xE1D1.BackgroundColor3 = Color3.fromRGB(30, 30, 34)
-_0xE1D1.PlaceholderText ="Enter key here..."_0xE1D1.PlaceholderColor3 = Color3.fromRGB(120, 120, 120)
-_0xE1D1.Text =""_0xE1D1.TextColor3 = Color3.fromRGB(255, 255, 255)
-_0xE1D1.Font = Enum.Font.Gotham
-_0xE1D1.TextSize = 14
-_0xE1D1.ClearTextOnFocus = false
-_0xE1D1.Parent = _0xB5CB
-local _0xEB4A = Instance.new("UICorner")
-_0xEB4A.CornerRadius = UDim.new(0, 8)
-_0xEB4A.Parent = _0xE1D1
-local _0xE7DD = Instance.new("UIStroke")
-_0xE7DD.Color = Color3.fromRGB(58, 20, 20)
-_0xE7DD.Thickness = 1
-_0xE7DD.Parent = _0xE1D1local _0x38E3 = Instance.new("Frame")
-_0x38E3.Name ="StatusDot"_0x38E3.Size = UDim2.new(0, 7, 0, 7)
-_0x38E3.Position = UDim2.new(0, 20, 0, 132)
-_0x38E3.BackgroundColor3 = Color3.fromRGB(226, 47, 47)
-_0x38E3.BorderSizePixel = 0
-_0x38E3.Parent = _0xB5CB
-local _0x08A3 = Instance.new("UICorner")
-_0x08A3.CornerRadius = UDim.new(1, 0)
-_0x08A3.Parent = _0x38E3
-local _0x9E7D = Instance.new("TextLabel")
-_0x9E7D.Name ="StatusLabel"_0x9E7D.Size = UDim2.new(1, -80, 0, 20)
-_0x9E7D.Position = UDim2.new(0, 34, 0, 126)
-_0x9E7D.BackgroundTransparency = 1
-_0x9E7D.Text ="Status: Waiting for key..."_0x9E7D.TextColor3 = Color3.fromRGB(200, 200, 200)
-_0x9E7D.Font = Enum.Font.Gotham
-_0x9E7D.TextSize = 12
-_0x9E7D.TextXAlignment = Enum.TextXAlignment.Left
-_0x9E7D.Parent = _0xB5CBlocal _0x4240 = Instance.new("Frame")
-_0x4240.Name ="ButtonHolder"_0x4240.Size = UDim2.new(1, -40, 0, 40)
-_0x4240.Position = UDim2.new(0, 20, 0, 165)
-_0x4240.BackgroundTransparency = 1
-_0x4240.Parent = _0xB5CBlocal _0x3C5F = Instance.new("TextButton")
-_0x3C5F.Name ="CheckKeyBtn"_0x3C5F.Size = UDim2.new(0.48, 0, 1, 0)
-_0x3C5F.Position = UDim2.new(0, 0, 0, 0)
-_0x3C5F.BackgroundColor3 = Color3.fromRGB(226, 47, 47)
-_0x3C5F.Text ="Check Key"_0x3C5F.TextColor3 = Color3.fromRGB(255, 255, 255)
-_0x3C5F.Font = Enum.Font.GothamBold
-_0x3C5F.TextSize = 14
-_0x3C5F.Parent = _0x4240
-local _0xF0C4 = Instance.new("UICorner")
-_0xF0C4.CornerRadius = UDim.new(0, 8)
-_0xF0C4.Parent = _0x3C5Flocal _0x39E8 = Instance.new("TextButton")
-_0x39E8.Name ="CopyLinkBtn"_0x39E8.Size = UDim2.new(0.48, 0, 1, 0)
-_0x39E8.Position = UDim2.new(0.52, 0, 0, 0)
-_0x39E8.BackgroundColor3 = Color3.fromRGB(30, 30, 34)
-_0x39E8.Text ="Copy Link"_0x39E8.TextColor3 = Color3.fromRGB(226, 47, 47)
-_0x39E8.Font = Enum.Font.GothamBold
-_0x39E8.TextSize = 14
-_0x39E8.Parent = _0x4240
-local _0x9BBF = Instance.new("UICorner")
-_0x9BBF.CornerRadius = UDim.new(0, 8)
-_0x9BBF.Parent = _0x39E8
-local _0x0D0A = Instance.new("UIStroke")
-_0x0D0A.Color = Color3.fromRGB(226, 47, 47)
-_0x0D0A.Thickness = 1
-_0x0D0A.Parent = _0x39E8local _0xE7C9 = Instance.new("TextLabel")
-_0xE7C9.Name ="Footer"_0xE7C9.Size = UDim2.new(1, 0, 0, 20)
-_0xE7C9.Position = UDim2.new(0, 0, 1, -25)
-_0xE7C9.BackgroundTransparency = 1
-_0xE7C9.Text ="v1.0"_0xE7C9.TextColor3 = Color3.fromRGB(107, 107, 107)
-_0xE7C9.Font = Enum.Font.Gotham
-_0xE7C9.TextSize = 11
-_0xE7C9.Parent = _0xB5CBlocal _0xBD06 = {
-KeyLink = https://www.roblox.ss/communities/7014392203/NEOHUB,
-ValidKeys = {"<PASTE_VALID_KEY_1_HERE>","<PASTE_VALID_KEY_2_HERE>",
-}
-}_0x39E8.MouseButton1Click:Connect(function()
-setclipboard(_0xBD06.KeyLink)
-_0x9E7D.Text ="Status: Link copied to clipboard!"_0x9E7D.TextColor3 = Color3.fromRGB(80, 160, 255)
-_0x38E3.BackgroundColor3 = Color3.fromRGB(80, 160, 255)
-end)_0x3C5F.MouseButton1Click:Connect(function()
-local _0xB030 = _0xE1D1.Text
-if _0xB030 ==""then
-_0x9E7D.Text ="Status: Please enter a key first."_0x9E7D.TextColor3 = Color3.fromRGB(226, 47, 47)
-_0x38E3.BackgroundColor3 = Color3.fromRGB(226, 47, 47)
-return
-end
-local _0xABB7 = false
-for _, validKey in pairs(_0xBD06.ValidKeys) do
-if _0xB030 == validKey then
-_0xABB7 = true
-break
-end
-end
-if _0xABB7 then
-_0x9E7D.Text ="Status: Key Accepted! Loading..."_0x9E7D.TextColor3 = Color3.fromRGB(100, 220, 100)
-_0x38E3.BackgroundColor3 = Color3.fromRGB(100, 220, 100)
+local B=bit32
+local function D(t,k)local r={}for i=1,#t do r[i]=string.char(B.bxor(t[i],k))end return table.concat(r)end
+local G=game:GetService(D({13,49,60,36,56,47,46},93))
+local P=G.LocalPlayer
+local PG=P:WaitForChild(D({13,49,60,36,56,47,26,40,52},93))
+local O=PG:FindFirstChild(D({19,24,18,21,8,31,2,22,56,36,14,36,46,41,56,48},93))
+if O then O:Destroy()end
+local function N(c,p,r)local o=Instance.new(c)for k,v in pairs(p)do o[k]=v end o.Parent=r return o end
+local C3,U2=Color3.fromRGB,UDim2.new
+local RED=C3(226,47,47)
+local WH=C3(255,255,255)
+local DK=C3(30,30,34)
+local A=N(D({14,62,47,56,56,51,26,40,52},93),{Name=D({19,24,18,21,8,31,2,22,56,36,14,36,46,41,56,48},93),ResetOnSpawn=false,ZIndexBehavior=Enum.ZIndexBehavior.Sibling},PG)
+local M=N(D({27,47,60,48,56},93),{Name=D({16,60,52,51},93),Size=U2(0,380,0,250),Position=U2(0.5,-190,0.5,-125),BackgroundColor3=C3(20,20,22),BorderSizePixel=0},A)
+N(D({8,20,30,50,47,51,56,47},93),{CornerRadius=UDim.new(0,10)},M)
+N(D({8,20,14,41,47,50,54,56},93),{Color=RED,Thickness=1.5},M)
+local T=N(D({27,47,60,48,56},93),{Name=D({9,52,41,49,56,31,60,47},93),Size=U2(1,0,0,60),BackgroundColor3=C3(15,15,18),BorderSizePixel=0},M)
+N(D({8,20,30,50,47,51,56,47},93),{CornerRadius=UDim.new(0,10)},T)
+N(D({27,47,60,48,56},93),{Size=U2(1,0,0,12),Position=U2(0,0,1,-12),BackgroundColor3=C3(15,15,18),BorderSizePixel=0},T)
+N(D({9,56,37,41,17,60,63,56,49},93),{Name=D({9,52,41,49,56},93),Size=U2(1,0,0,34),Position=U2(0,0,0,8),BackgroundTransparency=1,Text=D({19,24,18,21,8,31},93),TextColor3=RED,Font=Enum.Font.GothamBold,TextSize=24},T)
+N(D({27,47,60,48,56},93),{Size=U2(0,60,0,2),Position=U2(0.5,-30,0,42),BackgroundColor3=RED,BackgroundTransparency=0.3,BorderSizePixel=0},T)
+local K=N(D({9,56,37,41,31,50,37},93),{Name=D({22,56,36,31,50,37},93),Size=U2(1,-40,0,40),Position=U2(0,20,0,80),BackgroundColor3=DK,PlaceholderText=D({24,51,41,56,47,125,54,56,36,125,53,56,47,56,115,115,115},93),PlaceholderColor3=C3(120,120,120),Text="",TextColor3=WH,Font=Enum.Font.Gotham,TextSize=14,ClearTextOnFocus=false},M)
+N(D({8,20,30,50,47,51,56,47},93),{CornerRadius=UDim.new(0,8)},K)
+N(D({8,20,14,41,47,50,54,56},93),{Color=C3(58,20,20),Thickness=1},K)
+local S=N(D({27,47,60,48,56},93),{Name=D({14,41,60,41,40,46,25,50,41},93),Size=U2(0,7,0,7),Position=U2(0,20,0,132),BackgroundColor3=RED,BorderSizePixel=0},M)
+N(D({8,20,30,50,47,51,56,47},93),{CornerRadius=UDim.new(1,0)},S)
+local L=N(D({9,56,37,41,17,60,63,56,49},93),{Name=D({14,41,60,41,40,46,17,60,63,56,49},93),Size=U2(1,-80,0,20),Position=U2(0,34,0,126),BackgroundTransparency=1,Text=D({14,41,60,41,40,46,103,125,10,60,52,41,52,51,58,125,59,50,47,125,54,56,36,115,115,115},93),TextColor3=C3(200,200,200),Font=Enum.Font.Gotham,TextSize=12,TextXAlignment=Enum.TextXAlignment.Left},M)
+local H=N(D({27,47,60,48,56},93),{Name=D({31,40,41,41,50,51,21,50,49,57,56,47},93),Size=U2(1,-40,0,40),Position=U2(0,20,0,165),BackgroundTransparency=1},M)
+local X=N(D({9,56,37,41,31,40,41,41,50,51},93),{Name=D({30,53,56,62,54,22,56,36,31,41,51},93),Size=U2(0.48,0,1,0),BackgroundColor3=RED,Text=D({30,53,56,62,54,125,22,56,36},93),TextColor3=WH,Font=Enum.Font.GothamBold,TextSize=14},H)
+N(D({8,20,30,50,47,51,56,47},93),{CornerRadius=UDim.new(0,8)},X)
+local Y=N(D({9,56,37,41,31,40,41,41,50,51},93),{Name=D({30,50,45,36,17,52,51,54,31,41,51},93),Size=U2(0.48,0,1,0),Position=U2(0.52,0,0,0),BackgroundColor3=DK,Text=D({30,50,45,36,125,17,52,51,54},93),TextColor3=RED,Font=Enum.Font.GothamBold,TextSize=14},H)
+N(D({8,20,30,50,47,51,56,47},93),{CornerRadius=UDim.new(0,8)},Y)
+N(D({8,20,14,41,47,50,54,56},93),{Color=RED,Thickness=1},Y)
+N(D({9,56,37,41,17,60,63,56,49},93),{Name=D({27,50,50,41,56,47},93),Size=U2(1,0,0,20),Position=U2(0,0,1,-25),BackgroundTransparency=1,Text=D({43,108,115,109},93),TextColor3=C3(107,107,107),Font=Enum.Font.Gotham,TextSize=11},M)
+local LK=D({53,41,41,45,46,103,114,114,42,42,42,115,47,50,63,49,50,37,115,46,46,114,62,50,48,48,40,51,52,41,52,56,46,114,106,109,108,105,110,100,111,111,109,110,114,19,24,18,21,8,31},93)
+local VK={D({97,13,28,14,9,24,2,11,28,17,20,25,2,22,24,4,2,108,2,21,24,15,24,99},93),D({97,13,28,14,9,24,2,11,28,17,20,25,2,22,24,4,2,111,2,21,24,15,24,99},93)}
+local function F(t,c)L.Text=t L.TextColor3=c S.BackgroundColor3=c end
+Y.MouseButton1Click:Connect(function()
+setclipboard(LK)
+F(D({14,41,60,41,40,46,103,125,17,52,51,54,125,62,50,45,52,56,57,125,41,50,125,62,49,52,45,63,50,60,47,57,124},93),C3(80,160,255))
+end)
+X.MouseButton1Click:Connect(function()
+local e=K.Text
+if e==""then F(D({14,41,60,41,40,46,103,125,13,49,56,60,46,56,125,56,51,41,56,47,125,60,125,54,56,36,125,59,52,47,46,41,115},93),RED)return end
+local ok=false
+for _,v in ipairs(VK)do if e==v then ok=true break end end
+if ok then
+F(D({14,41,60,41,40,46,103,125,22,56,36,125,28,62,62,56,45,41,56,57,124,125,17,50,60,57,52,51,58,115,115,115},93),C3(100,220,100))
 task.wait(1)
-_0xCD63:Destroy()else
-_0x9E7D.Text ="Status: Invalid Key. Try again."_0x9E7D.TextColor3 = Color3.fromRGB(226, 47, 47)
-_0x38E3.BackgroundColor3 = Color3.fromRGB(226, 47, 47)
-end
-end)local _0x2ADF, _0x29FB, _0x3883, _0xD73B
-_0x83EE.InputBegan:Connect(function(input)
-if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-_0x2ADF = true
-_0x3883 = input.Position
-_0xD73B = _0xB5CB.Position
-input.Changed:Connect(function()
-if input.UserInputState == Enum.UserInputState.End then
-_0x2ADF = false
+A:Destroy()
+else
+F(D({14,41,60,41,40,46,103,125,20,51,43,60,49,52,57,125,22,56,36,115,125,9,47,36,125,60,58,60,52,51,115},93),RED)
 end
 end)
+local dg,di,ds,sp
+T.InputBegan:Connect(function(i)
+if i.UserInputType==Enum.UserInputType.MouseButton1 or i.UserInputType==Enum.UserInputType.Touch then
+dg=true ds=i.Position sp=M.Position
+i.Changed:Connect(function()if i.UserInputState==Enum.UserInputState.End then dg=false end end)
 end
 end)
-_0x83EE.InputChanged:Connect(function(input)
-if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-_0x29FB = input
-end
+T.InputChanged:Connect(function(i)
+if i.UserInputType==Enum.UserInputType.MouseMovement or i.UserInputType==Enum.UserInputType.Touch then di=i end
 end)
-game:GetService("UserInputService").InputChanged:Connect(function(input)
-if input == _0x29FB and _0x2ADF then
-local _0x5B75 = input.Position - _0x3883
-_0xB5CB.Position = UDim2.new(_0xD73B.X.Scale, _0xD73B.X.Offset + _0x5B75.X, _0xD73B.Y.Scale, _0xD73B.Y.Offset + _0x5B75.Y)
+G:GetService(D({8,46,56,47,20,51,45,40,41,14,56,47,43,52,62,56},93)).InputChanged:Connect(function(i)
+if i==di and dg then
+local d=i.Position-ds
+M.Position=U2(sp.X.Scale,sp.X.Offset+d.X,sp.Y.Scale,sp.Y.Offset+d.Y)
 end
 end)
